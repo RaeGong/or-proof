@@ -1,0 +1,5 @@
+N length (bits),averaged proof time (ms), averaged verify time (ms), repetition times,
+1024 ,10.4333 ,5 ,30
+2048 ,67.3811 ,33.6 ,30
+1024 ,10.1333 ,4.73333 ,30
+2048 ,67.4378 ,32.5911 ,30

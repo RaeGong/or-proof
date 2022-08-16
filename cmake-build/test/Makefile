@@ -87,6 +87,18 @@ install/strip/fast: preinstall/fast
 	/usr/local/Cellar/cmake/3.19.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.19.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.19.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -120,18 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.19.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.19.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target test
 test:
@@ -187,6 +187,81 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/runAllTest.dir/rule:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runAllTest.dir/rule
+.PHONY : test/CMakeFiles/runAllTest.dir/rule
+
+# Convenience name for target.
+runAllTest: test/CMakeFiles/runAllTest.dir/rule
+
+.PHONY : runAllTest
+
+# fast build rule for target.
+runAllTest/fast:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/build
+.PHONY : runAllTest/fast
+
+# Convenience name for target.
+test/CMakeFiles/runProverTest.dir/rule:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runProverTest.dir/rule
+.PHONY : test/CMakeFiles/runProverTest.dir/rule
+
+# Convenience name for target.
+runProverTest: test/CMakeFiles/runProverTest.dir/rule
+
+.PHONY : runProverTest
+
+# fast build rule for target.
+runProverTest/fast:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runProverTest.dir/build.make test/CMakeFiles/runProverTest.dir/build
+.PHONY : runProverTest/fast
+
+# Convenience name for target.
+test/CMakeFiles/runAppTest.dir/rule:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runAppTest.dir/rule
+.PHONY : test/CMakeFiles/runAppTest.dir/rule
+
+# Convenience name for target.
+runAppTest: test/CMakeFiles/runAppTest.dir/rule
+
+.PHONY : runAppTest
+
+# fast build rule for target.
+runAppTest/fast:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAppTest.dir/build.make test/CMakeFiles/runAppTest.dir/build
+.PHONY : runAppTest/fast
+
+# Convenience name for target.
+test/CMakeFiles/runVerifierTest.dir/rule:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runVerifierTest.dir/rule
+.PHONY : test/CMakeFiles/runVerifierTest.dir/rule
+
+# Convenience name for target.
+runVerifierTest: test/CMakeFiles/runVerifierTest.dir/rule
+
+.PHONY : runVerifierTest
+
+# fast build rule for target.
+runVerifierTest/fast:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runVerifierTest.dir/build.make test/CMakeFiles/runVerifierTest.dir/build
+.PHONY : runVerifierTest/fast
+
+# Convenience name for target.
+test/CMakeFiles/runPaillierTest.dir/rule:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runPaillierTest.dir/rule
+.PHONY : test/CMakeFiles/runPaillierTest.dir/rule
+
+# Convenience name for target.
+runPaillierTest: test/CMakeFiles/runPaillierTest.dir/rule
+
+.PHONY : runPaillierTest
+
+# fast build rule for target.
+runPaillierTest/fast:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runPaillierTest.dir/build.make test/CMakeFiles/runPaillierTest.dir/build
+.PHONY : runPaillierTest/fast
+
+# Convenience name for target.
 test/CMakeFiles/runTest.dir/rule:
 	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runTest.dir/rule
 .PHONY : test/CMakeFiles/runTest.dir/rule
@@ -201,12 +276,133 @@ runTest/fast:
 	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTest.dir/build.make test/CMakeFiles/runTest.dir/build
 .PHONY : runTest/fast
 
+Paillier_test.o: Paillier_test.cpp.o
+
+.PHONY : Paillier_test.o
+
+# target to build an object file
+Paillier_test.cpp.o:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Paillier_test.cpp.o
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runPaillierTest.dir/build.make test/CMakeFiles/runPaillierTest.dir/Paillier_test.cpp.o
+.PHONY : Paillier_test.cpp.o
+
+Paillier_test.i: Paillier_test.cpp.i
+
+.PHONY : Paillier_test.i
+
+# target to preprocess a source file
+Paillier_test.cpp.i:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Paillier_test.cpp.i
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runPaillierTest.dir/build.make test/CMakeFiles/runPaillierTest.dir/Paillier_test.cpp.i
+.PHONY : Paillier_test.cpp.i
+
+Paillier_test.s: Paillier_test.cpp.s
+
+.PHONY : Paillier_test.s
+
+# target to generate assembly for a file
+Paillier_test.cpp.s:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Paillier_test.cpp.s
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runPaillierTest.dir/build.make test/CMakeFiles/runPaillierTest.dir/Paillier_test.cpp.s
+.PHONY : Paillier_test.cpp.s
+
+Prover_test.o: Prover_test.cpp.o
+
+.PHONY : Prover_test.o
+
+# target to build an object file
+Prover_test.cpp.o:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Prover_test.cpp.o
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runProverTest.dir/build.make test/CMakeFiles/runProverTest.dir/Prover_test.cpp.o
+.PHONY : Prover_test.cpp.o
+
+Prover_test.i: Prover_test.cpp.i
+
+.PHONY : Prover_test.i
+
+# target to preprocess a source file
+Prover_test.cpp.i:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Prover_test.cpp.i
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runProverTest.dir/build.make test/CMakeFiles/runProverTest.dir/Prover_test.cpp.i
+.PHONY : Prover_test.cpp.i
+
+Prover_test.s: Prover_test.cpp.s
+
+.PHONY : Prover_test.s
+
+# target to generate assembly for a file
+Prover_test.cpp.s:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Prover_test.cpp.s
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runProverTest.dir/build.make test/CMakeFiles/runProverTest.dir/Prover_test.cpp.s
+.PHONY : Prover_test.cpp.s
+
+Verifier_test.o: Verifier_test.cpp.o
+
+.PHONY : Verifier_test.o
+
+# target to build an object file
+Verifier_test.cpp.o:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Verifier_test.cpp.o
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runVerifierTest.dir/build.make test/CMakeFiles/runVerifierTest.dir/Verifier_test.cpp.o
+.PHONY : Verifier_test.cpp.o
+
+Verifier_test.i: Verifier_test.cpp.i
+
+.PHONY : Verifier_test.i
+
+# target to preprocess a source file
+Verifier_test.cpp.i:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Verifier_test.cpp.i
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runVerifierTest.dir/build.make test/CMakeFiles/runVerifierTest.dir/Verifier_test.cpp.i
+.PHONY : Verifier_test.cpp.i
+
+Verifier_test.s: Verifier_test.cpp.s
+
+.PHONY : Verifier_test.s
+
+# target to generate assembly for a file
+Verifier_test.cpp.s:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/Verifier_test.cpp.s
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runVerifierTest.dir/build.make test/CMakeFiles/runVerifierTest.dir/Verifier_test.cpp.s
+.PHONY : Verifier_test.cpp.s
+
+app_test.o: app_test.cpp.o
+
+.PHONY : app_test.o
+
+# target to build an object file
+app_test.cpp.o:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/app_test.cpp.o
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAppTest.dir/build.make test/CMakeFiles/runAppTest.dir/app_test.cpp.o
+.PHONY : app_test.cpp.o
+
+app_test.i: app_test.cpp.i
+
+.PHONY : app_test.i
+
+# target to preprocess a source file
+app_test.cpp.i:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/app_test.cpp.i
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAppTest.dir/build.make test/CMakeFiles/runAppTest.dir/app_test.cpp.i
+.PHONY : app_test.cpp.i
+
+app_test.s: app_test.cpp.s
+
+.PHONY : app_test.s
+
+# target to generate assembly for a file
+app_test.cpp.s:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/app_test.cpp.s
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAppTest.dir/build.make test/CMakeFiles/runAppTest.dir/app_test.cpp.s
+.PHONY : app_test.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
 
 # target to build an object file
 test.cpp.o:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/test.cpp.o
 	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTest.dir/build.make test/CMakeFiles/runTest.dir/test.cpp.o
 .PHONY : test.cpp.o
 
@@ -216,6 +412,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/test.cpp.i
 	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTest.dir/build.make test/CMakeFiles/runTest.dir/test.cpp.i
 .PHONY : test.cpp.i
 
@@ -225,6 +422,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
+	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/test.cpp.s
 	cd "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build" && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTest.dir/build.make test/CMakeFiles/runTest.dir/test.cpp.s
 .PHONY : test.cpp.s
 
@@ -241,7 +439,24 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... runAllTest"
+	@echo "... runAppTest"
+	@echo "... runPaillierTest"
+	@echo "... runProverTest"
 	@echo "... runTest"
+	@echo "... runVerifierTest"
+	@echo "... Paillier_test.o"
+	@echo "... Paillier_test.i"
+	@echo "... Paillier_test.s"
+	@echo "... Prover_test.o"
+	@echo "... Prover_test.i"
+	@echo "... Prover_test.s"
+	@echo "... Verifier_test.o"
+	@echo "... Verifier_test.i"
+	@echo "... Verifier_test.s"
+	@echo "... app_test.o"
+	@echo "... app_test.i"
+	@echo "... app_test.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

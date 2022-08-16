@@ -11,6 +11,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../deps/googletest-release-1.10.0/googletest/include"
+  "/usr/local/include"
   "../deps/googletest-release-1.10.0/googletest"
   )
 
@@ -18,6 +19,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/deps/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/deps/googletest-release-1.10.0/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/src/CMakeFiles/src_stac.dir/DependInfo.cmake"
+  "/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/src/utils/CMakeFiles/utils_stac.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -20,6 +20,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../deps/googletest-release-1.10.0/googletest/cmake/gtest.pc.in"
   "../deps/googletest-release-1.10.0/googletest/cmake/gtest_main.pc.in"
   "../deps/googletest-release-1.10.0/googletest/cmake/internal_utils.cmake"
+  "../src/CMakeLists.txt"
+  "../src/utils/CMakeLists.txt"
   "../test/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/CMakeCInformation.cmake"
@@ -40,8 +42,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/Compiler/GNU.cmake"
+  "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindOpenSSL.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindPackageMessage.cmake"
+  "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindPkgConfig.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindPythonInterp.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/FindThreads.cmake"
   "/usr/local/Cellar/cmake/3.19.3/share/cmake/Modules/GNUInstallDirs.cmake"
@@ -66,6 +70,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "deps/googletest-release-1.10.0/CMakeFiles/CMakeDirectoryInformation.cmake"
   "deps/googletest-release-1.10.0/googletest/generated/gmock.pc"
   "deps/googletest-release-1.10.0/googletest/generated/gmock_main.pc"
@@ -80,9 +86,17 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/CMakeFiles/src_stac.dir/DependInfo.cmake"
+  "src/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/utils/CMakeFiles/utils_stac.dir/DependInfo.cmake"
   "deps/googletest-release-1.10.0/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "deps/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "deps/googletest-release-1.10.0/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "deps/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "test/CMakeFiles/runAllTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/runProverTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/runAppTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/runVerifierTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/runPaillierTest.dir/DependInfo.cmake"
   "test/CMakeFiles/runTest.dir/DependInfo.cmake"
   )

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libutils_stac.a  CMakeFiles/utils_stac.dir/ConvertUtils.cpp.o CMakeFiles/utils_stac.dir/Timer.cpp.o
+/usr/bin/ranlib libutils_stac.a

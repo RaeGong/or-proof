@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libsrc_stac.a CMakeFiles/src_stac.dir/PaillierEncryption.cpp.o CMakeFiles/src_stac.dir/Prover.cpp.o CMakeFiles/src_stac.dir/Verifier.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libsrc_stac.a

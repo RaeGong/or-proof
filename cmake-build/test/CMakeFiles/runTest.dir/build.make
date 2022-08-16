@@ -100,6 +100,12 @@ test/runTest: test/CMakeFiles/runTest.dir/test.cpp.o
 test/runTest: test/CMakeFiles/runTest.dir/build.make
 test/runTest: lib/libgtest.a
 test/runTest: lib/libgtest_main.a
+test/runTest: src/libsrc_stac.a
+test/runTest: src/utils/libutils_stac.a
+test/runTest: /usr/local/lib/libntl.a
+test/runTest: /usr/local/lib/libgmp.a
+test/runTest: /usr/local/lib/libssl.dylib
+test/runTest: /usr/local/lib/libcrypto.dylib
 test/runTest: lib/libgtest.a
 test/runTest: test/CMakeFiles/runTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runTest"

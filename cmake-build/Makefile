@@ -187,6 +187,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named src_stac
+
+# Build rule for target.
+src_stac: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_stac
+.PHONY : src_stac
+
+# fast build rule for target.
+src_stac/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/src_stac.dir/build.make src/CMakeFiles/src_stac.dir/build
+.PHONY : src_stac/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named utils_stac
+
+# Build rule for target.
+utils_stac: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils_stac
+.PHONY : utils_stac
+
+# fast build rule for target.
+utils_stac/fast:
+	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils_stac.dir/build.make src/utils/CMakeFiles/utils_stac.dir/build
+.PHONY : utils_stac/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -239,6 +278,71 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named runAllTest
+
+# Build rule for target.
+runAllTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runAllTest
+.PHONY : runAllTest
+
+# fast build rule for target.
+runAllTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAllTest.dir/build.make test/CMakeFiles/runAllTest.dir/build
+.PHONY : runAllTest/fast
+
+#=============================================================================
+# Target rules for targets named runProverTest
+
+# Build rule for target.
+runProverTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runProverTest
+.PHONY : runProverTest
+
+# fast build rule for target.
+runProverTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runProverTest.dir/build.make test/CMakeFiles/runProverTest.dir/build
+.PHONY : runProverTest/fast
+
+#=============================================================================
+# Target rules for targets named runAppTest
+
+# Build rule for target.
+runAppTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runAppTest
+.PHONY : runAppTest
+
+# fast build rule for target.
+runAppTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runAppTest.dir/build.make test/CMakeFiles/runAppTest.dir/build
+.PHONY : runAppTest/fast
+
+#=============================================================================
+# Target rules for targets named runVerifierTest
+
+# Build rule for target.
+runVerifierTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runVerifierTest
+.PHONY : runVerifierTest
+
+# fast build rule for target.
+runVerifierTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runVerifierTest.dir/build.make test/CMakeFiles/runVerifierTest.dir/build
+.PHONY : runVerifierTest/fast
+
+#=============================================================================
+# Target rules for targets named runPaillierTest
+
+# Build rule for target.
+runPaillierTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runPaillierTest
+.PHONY : runPaillierTest
+
+# fast build rule for target.
+runPaillierTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runPaillierTest.dir/build.make test/CMakeFiles/runPaillierTest.dir/build
+.PHONY : runPaillierTest/fast
+
+#=============================================================================
 # Target rules for targets named runTest
 
 # Build rule for target.
@@ -268,7 +372,15 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... main"
+	@echo "... runAllTest"
+	@echo "... runAppTest"
+	@echo "... runPaillierTest"
+	@echo "... runProverTest"
 	@echo "... runTest"
+	@echo "... runVerifierTest"
+	@echo "... src_stac"
+	@echo "... utils_stac"
 .PHONY : help
 
 

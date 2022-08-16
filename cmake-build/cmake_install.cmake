@@ -39,6 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/src/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/raegong/Dropbox/polyu projects/2021-zkp/code/or-proof/cmake-build/deps/googletest-release-1.10.0/cmake_install.cmake")
 endif()
 

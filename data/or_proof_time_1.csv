@@ -1,0 +1,3 @@
+N length,proof time (ms), verify time (ms), (ni) proof time (ms),(ni) verify time (ms),
+1024,0,0,4,3
+2048,0,0,29,21
